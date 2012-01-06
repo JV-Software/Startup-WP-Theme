@@ -1,7 +1,7 @@
 /*
-Theme Name: Startup Theme
+Theme Name: ETC Foundation
 Theme URI: http://www.jvsoftware.com
-Description: Custom theme developed for Startup Theme
+Description: Custom theme developed for ETC Foundation
 Author: JV Software
 Author URI: http://www.jvsoftware.com
 Version: 1.0
@@ -42,9 +42,8 @@ body { margin: 0; font-size: $font-size; line-height: $baseline; color: $font-co
 
 button, input, select, textarea { font-family: $font-family; color: $font-color; }
 
-::-moz-selection { background: #62cbf0; color: #FFF; text-shadow: none; }
-::selection { background: #62cbf0; color: #FFF; text-shadow: none; }
-
+::-moz-selection { background: #3297fd; color: #FFF; text-shadow: none; }
+::selection { background: #3297fd; color: #FFF; text-shadow: none; }
 
 /* =============================================================================
 Links
@@ -148,7 +147,6 @@ img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 
 svg:not(:root) { overflow: hidden; }
 
-
 /* =============================================================================
 Figures
 ========================================================================== */
@@ -182,7 +180,6 @@ textarea { overflow: auto; vertical-align: top; resize: vertical; }
 
 input:valid, textarea:valid {  }
 input:invalid, textarea:invalid { background-color: #f0dddd; }
-
 
 /* =============================================================================
 Tables
@@ -239,8 +236,8 @@ Custom WP CSS Styles
 	font-style: italic
 }
 
-/* ==|== non-semantic helper classes ========================================
-Please define your styles before this section.
+/* =============================================================================
+Non-semantic helper classes
 ========================================================================== */
 
 .pushright {

@@ -14,6 +14,7 @@ $experimental-support-for-svg: true;
 $baseline: 1.3em;
 $font-size: 13px;
 $font-color: #000;
+$font-color-input: #000;
 $font-family: Arial, sans-serif;
 
 $bg-color: #FFF;
@@ -40,7 +41,7 @@ html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-
 
 body { margin: 0; font-size: $font-size; line-height: $baseline; color: $font-color; font-family: $font-family; background: $bg-color }
 
-button, input, select, textarea { font-family: $font-family; color: $font-color; }
+button, input, select, textarea { font-family: $font-family; color: $font-color-input; }
 
 ::-moz-selection { background: #3297fd; color: #FFF; text-shadow: none; }
 ::selection { background: #3297fd; color: #FFF; text-shadow: none; }

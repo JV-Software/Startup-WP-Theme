@@ -218,7 +218,7 @@ Custom WP CSS Styles
 }
 
 .wp-caption {
-	border: 1px solid #c31963;
+	border: 1px solid $link-color;
 	text-align: center;
 	padding: 5px;
 	@include border-radius(4px);

@@ -15,7 +15,7 @@ $baseline: 1.3em;
 $font-size: 13px;
 $font-color: #000;
 $font-color-input: #000;
-$font-family: Arial, sans-serif;
+$font-family: sans-serif;
 
 $bg-color: #FFF;
 
@@ -27,92 +27,201 @@ $heading-color: #000;
 HTML5 display definitions
 ========================================================================== */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
-audio:not([controls]) { display: none; }
-[hidden] { display: none; }
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
 
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
 
 /* =============================================================================
 Base
 ========================================================================== */
 
-html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-family: $font-family;
+    color: $font-color;
+}
 
-body { margin: 0; font-size: $font-size; line-height: $baseline; color: $font-color; font-family: $font-family; background: $bg-color }
+body {
+    margin: 0;
+    font-size: $font-size;
+    line-height: $baseline;
+    background: $bg-color;
+}
 
-button, input, select, textarea { font-family: $font-family; color: $font-color-input; }
+button,
+input,
+select,
+textarea {
+    color: $font-color-input;
+}
 
-::-moz-selection { background: #3297fd; color: #FFF; text-shadow: none; }
-::selection { background: #3297fd; color: #FFF; text-shadow: none; }
+::-moz-selection {
+    background: #3297fd;
+    color: #FFF;
+    text-shadow: none;
+}
+
+::selection {
+    background: #3297fd;
+    color: #FFF;
+    text-shadow: none;
+}
 
 /* =============================================================================
 Links
 ========================================================================== */
 
 a {
-  color: $link-color;
-  &:hover, &:active { 
-    outline: 0; 
-  }
-  &:focus { 
-    outline: thin dotted; 
-  }
+    color: $link-color;
+    &:hover,
+    &:active {
+        outline: 0;
+    }
+    &:focus {
+        outline: thin dotted;
+    }
 }
 
 /* =============================================================================
 Typography
 ========================================================================== */
 
-abbr[title] { border-bottom: 1px dotted; }
+abbr[title] {
+    border-bottom: 1px dotted;
+}
 
-b, strong { font-weight: bold; }
+b,
+strong {
+    font-weight: bold;
+}
 
-blockquote { margin: 1em 2em; }
+blockquote {
+    margin: 1em 2em;
+}
 
-dfn { font-style: italic; }
+dfn {
+    font-style: italic;
+}
 
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
 
-ins { background: #ff9; color: #000; text-decoration: none; }
+ins {
+    background: #ff9;
+    color: #000;
+    text-decoration: none;
+}
 
-mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+mark {
+    background: #ff0;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
 
-pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
 
-pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
 
-q { quotes: none; }
-q:before, q:after { content: ""; content: none; }
+q {
+    quotes: none;
+}
 
-small { font-size: 85%; }
+q:before,
+q:after{
+    content: "";
+    content: none;
+}
 
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
+small {
+    font-size: 85%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
 
 p {
-  margin: 0 0 $baseline;
+    margin: 0 0 $baseline;
 }
 
 #{headings()} {
-  color: $heading-color;
-  margin: 0;
-  line-height: $baseline;
+    color: $heading-color;
+    margin: 0;
+    line-height: $baseline;
 }
 
 h1 {
-  font-size: 2.1em;
-  margin-bottom: $baseline / 4;
+    font-size: 2.1em;
+    margin-bottom: $baseline / 4;
 }
 
 h2 {
-  font-size: 1.8em;
-  margin-bottom: $baseline / 3;
+    font-size: 1.8em;
+    margin-bottom: $baseline / 3;
 }
 
-h3, h4, h5, h6 {
-  margin-bottom: $baseline / 2;
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: $baseline / 2;
 }
 
 h3 {
@@ -135,61 +244,141 @@ h6 {
 Lists
 ========================================================================== */
 
-ul, ol { margin: 1em 0 $baseline; padding: 0 0 0 2em; }
-dd { margin: 0 0 0 2em; }
-nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+ul,
+ol {
+    margin: 1em 0 $baseline;
+    padding: 0 0 0 2em;
+}
 
+dd {
+    margin: 0 0 0 2em;
+}
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
 
 /* =============================================================================
 Embedded content
 ========================================================================== */
 
-img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+}
 
-svg:not(:root) { overflow: hidden; }
+svg:not(:root) {
+    overflow: hidden;
+}
 
 /* =============================================================================
 Figures
 ========================================================================== */
 
-figure { margin: 0; }
+figure {
+    margin: 0;
+}
 
 /* =============================================================================
 Forms
 ========================================================================== */
 
-form { margin: 0 0 $baseline; }
-fieldset { border: 0; margin: 0; padding: 0; }
+form {
+    margin: 0;
+}
 
-label { cursor: pointer; }
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
 
-legend { border: 0; *margin-left: -7px; padding: 0; }
+label {
+    cursor: pointer;
+}
 
-button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+legend {
+    border: 0;
+    *margin-left: -7px;
+    padding: 0;
+}
 
-button, input { line-height: normal; }
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
 
-button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+button,
+input {
+    line-height: normal;
+}
 
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
-input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
-input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+    *overflow: visible;
+}
 
-button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
 
-textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
 
-input:valid, textarea:valid {  }
-input:invalid, textarea:invalid { background-color: #f0dddd; }
+input[type="search"] {
+    -webkit-appearance: textfield;
+    @include box-sizing(content-box);
+}
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
 
 /* =============================================================================
 Tables
 ========================================================================== */
 
-table { border-collapse: collapse; border-spacing: 0; margin: 0 0 $baseline}
-td { vertical-align: top; }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 0 $baseline;
+}
 
-/* ==|== primary styles =====================================================
+td {
+    vertical-align: top;
+}
+
+/* ==|== Primary Styles =====================================================
 Author: Javier Villanueva
 ========================================================================== */
 
@@ -199,22 +388,23 @@ Author: Javier Villanueva
 Custom WP CSS Styles
 ========================================================================== */
 
-.aligncenter, div.aligncenter {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .alignleft {
-	float: left;
-	padding: 0 5px 5px 0;
-	margin: 0 20px 20px 0;
+    float: left;
+    padding: 0 5px 5px 0;
+    margin: 0 20px 20px 0;
 }
 
 .alignright {
-	float: right;
-	padding: 0 0 5px 5px;
-	margin: 0 0 20px 20px;
+    float: right;
+    padding: 0 0 5px 5px;
+    margin: 0 0 20px 20px;
 }
 
 .wp-caption {
@@ -234,34 +424,62 @@ Custom WP CSS Styles
 	font-size: 85%;
 	margin: 0;
 	padding: 3px;
-	font-style: italic
+	font-style: italic;
 }
 
 /* =============================================================================
 Non-semantic helper classes
 ========================================================================== */
 
-.pushright {
-	float: right
+.right {
+	float: right;
 }
 
-.pushleft {
-	float: left
+.left {
+	float: left;
 }
 
 .no-bottom {
-	margin-bottom: 0
+	margin-bottom: 0;
 }
 
-.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
-.ir br { display: none; }
+.ir {
+    border: 0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    background-color: transparent;
+}
 
-.hidden { display: none; }
+.hidden {
+    display: none;
+}
 
-.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
 
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
 
-.invisible { visibility: hidden; }
+.invisible {
+    visibility: hidden;
+}
 
-.clearfix { @include pie-clearfix; }
+.clearfix {
+    @include pie-clearfix;
+}

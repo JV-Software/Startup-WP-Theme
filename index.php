@@ -10,7 +10,6 @@
         <title>
         <?php
             if ( is_home() || is_front_page() ) { bloginfo('name'); echo ' | '; bloginfo('description'); }
-            elseif ( is_page() ) { bloginfo('name'); wp_title(' | '); }
             elseif ( is_search() ) { bloginfo('name'); echo ' | Results for: ' . wp_specialchars($s); }
             elseif ( is_404() ) { bloginfo('name'); echo ' | Not found'; }
             else { bloginfo('name'); wp_title(' | '); }
@@ -20,8 +19,8 @@
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"  />
     </head>
     <body <?php body_class(); ?>>
-			
+		
 	
-		<?php wp_footer(); ?>
+    <?php wp_footer(); ?>
 	</body>
 </html>

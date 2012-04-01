@@ -80,6 +80,7 @@ input,
 select,
 textarea {
     color: $font-color-input;
+    font-family: $font-family;
 }
 
 ::-moz-selection {

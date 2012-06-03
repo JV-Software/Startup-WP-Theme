@@ -11,5 +11,8 @@
 function jvs_theme_setup() {
     // Enqueue jQuery
     wp_enqueue_script('jquery');
+
+    // Add default posts and comments RSS feed links to <head>.
+    add_theme_support( 'automatic-feed-links' );
 }
 add_action('after_setup_theme', 'jvs_theme_setup');

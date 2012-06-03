@@ -16,3 +16,13 @@ function jvs_theme_setup() {
     add_theme_support( 'automatic-feed-links' );
 }
 add_action('after_setup_theme', 'jvs_theme_setup');
+
+/**
+ * Remove WP version from <head>
+ * 
+ * @return string Empty string
+ */
+function jvs_remove_version() {
+    return '';
+}
+add_filter('the_generator', 'jvs_remove_version');

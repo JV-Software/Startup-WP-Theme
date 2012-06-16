@@ -11,6 +11,9 @@
 function jvs_theme_setup() {
     // Enqueue jQuery
     wp_enqueue_script('jquery');
+    
+    // Enqueue custom theme scripts in footer
+    wp_enqueue_script('custom-scripts', get_bloginfo('template_url') . '/js/script.min.js', array('jquery'), false, true);
 
     // Add default posts and comments RSS feed links to <head>.
     add_theme_support( 'automatic-feed-links' );

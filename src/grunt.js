@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     },
     concat: {
       dist: {
-        src: ['<banner:meta.banner>', '../js/libs/*.js', '../js/script.js'],
+        src: ['<banner:meta.banner>', '../js/libs/!(modernizr).js', '../js/script.js'],
         dest: '../js/script.min.js'
       }
     },

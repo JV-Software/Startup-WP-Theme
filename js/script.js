@@ -4,6 +4,6 @@
  * @param  jQuery $
  * @return void
  */
-(function($) {
+jQuery(document).ready(function($) {
     //
-}(jQuery));
+});

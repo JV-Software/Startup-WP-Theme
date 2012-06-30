@@ -329,8 +329,8 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     cursor: pointer;
-    -webkit-appearance: button;
     *overflow: visible;
+    @include appearance(button);
 }
 
 button[disabled],
@@ -345,12 +345,12 @@ input[type="radio"] {
 }
 
 input[type="search"] {
-    -webkit-appearance: textfield;
+    @include appearance(textfield);
     @include box-sizing(content-box);
 }
 
 input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+    @include appearance(none);
 }
 
 button::-moz-focus-inner,

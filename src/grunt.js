@@ -9,7 +9,15 @@ module.exports = function(grunt) {
         '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
         '* http://www.jvsoftware.com/\n' +
         '* Copyright (c) <%= grunt.template.today("yyyy") %> ' +
-        'JV Software; Licensed MIT */'
+        'JV Software; Licensed MIT */',
+      wpblock: '/*! \n' + 
+        'Theme Name: Startup Theme \n' +
+        'Theme URI: http://www.jvsoftware.com \n' +
+        'Description: Custom theme developed for Startup Theme \n' +
+        'Author: JV Software \n' +
+        'Author URI: http://www.jvsoftware.com \n' +
+        'Version: 1.0 \n' + 
+        '*/'
     },
     lint: {
        files: ['grunt.js', '../js/script.js']
@@ -24,6 +32,12 @@ module.exports = function(grunt) {
       dist: {
         src: ['<banner:meta.banner>', '<config:concat.dist.dest>'],
         dest: '<config:concat.dist.dest>'
+      }
+    },
+    cssmin: {
+      dist: {
+        src: ['<banner:meta.wpblock>', '../sass/style.css'],
+        dest: '../style.css'
       }
     },
     watch: {
@@ -55,9 +69,11 @@ module.exports = function(grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', 'lint concat min compass');
+  grunt.registerTask('default', 'lint concat min compass cssmin');
   
   // Compass tasks
   grunt.loadNpmTasks('grunt-compass');
+  // CSS tasks
+  grunt.loadNpmTasks('grunt-css');
 
 };

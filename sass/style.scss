@@ -208,12 +208,14 @@ p {
     line-height: $baseline;
 }
 
-h1 {
+h1,
+.alpha {
     font-size: 2.1em;
     margin-bottom: $baseline / 4;
 }
 
-h2 {
+h2,
+.beta {
     font-size: 1.8em;
     margin-bottom: $baseline / 3;
 }
@@ -221,23 +223,31 @@ h2 {
 h3,
 h4,
 h5,
-h6 {
+h6,
+.gamma,
+.delta,
+.epsilon,
+.zeta {
     margin-bottom: $baseline / 2;
 }
 
-h3 {
+h3,
+.gamma {
   font-size: 1.6em;
 }
 
-h4 {
+h4,
+.delta {
   font-size: 1.4em;
 }
 
-h5 {
+h5,
+.epsilon {
   font-size: 1.2em;
 }
 
-h6 {
+h6,
+.zeta {
   font-size: 1.1em;
 }
 

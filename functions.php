@@ -28,12 +28,5 @@ function jvs_enqueue_scripts() {
 }
 add_action('wp_enqueue_scripts', 'jvs_enqueue_scripts');
 
-/**
- * Remove WP version from <head>
- * 
- * @return string Empty string
- */
-function jvs_remove_version() {
-    return '';
-}
-add_filter('the_generator', 'jvs_remove_version');
+// Remove WP version from <head>
+remove_action('wp_head', 'wp_generator');

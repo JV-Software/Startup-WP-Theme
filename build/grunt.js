@@ -41,7 +41,7 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ['<config:lint.files>', '../sass/**/*.scss', '../js/**/.js'],
+      files: ['<config:lint.files>', '../sass/**/*.scss', '../js/**/*.js'],
       tasks: 'default'
     },
     jshint: {

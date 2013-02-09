@@ -3,20 +3,20 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     meta: {
-      version: '0.1.0',
-      banner: '/*! PROJECT_NAME - v<%= meta.version %> - ' +
+      banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
         '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-        '* http://www.jvsoftware.com/\n' +
+        '* <%= pkg.homepage %>\n' +
         '* Copyright (c) <%= grunt.template.today("yyyy") %> ' +
-        'JV Software; Licensed MIT */',
+        'JV Software */',
       wpblock: '/*! \n' + 
-        'Theme Name: Startup Theme \n' +
-        'Theme URI: http://www.jvsoftware.com \n' +
-        'Description: Custom theme developed for Startup Theme \n' +
+        'Theme Name: <%= pkg.name %> \n' +
+        'Theme URI: <%= pkg.homepage %> \n' +
+        'Description: <%= pkg.description %> \n' +
         'Author: JV Software \n' +
-        'Author URI: http://www.jvsoftware.com \n' +
-        'Version: 1.0 \n' + 
+        'Author URI: <%= pkg.homepage %> \n' +
+        'Version: <%= pkg.version %> \n' + 
         '*/'
     },
     lint: {

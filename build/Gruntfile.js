@@ -10,13 +10,13 @@ module.exports = function(grunt) {
         '* <%= pkg.homepage %>\n' +
         '* Copyright (c) <%= grunt.template.today("yyyy") %> ' +
         'JV Software */\n',
-      wpblock: '/*! \n' +
-        'Theme Name: <%= pkg.name %> \n' +
-        'Theme URI: <%= pkg.homepage %> \n' +
-        'Description: <%= pkg.description %> \n' +
-        'Author: JV Software \n' +
-        'Author URI: <%= pkg.homepage %> \n' +
-        'Version: <%= pkg.version %> \n' +
+      wpblock: '/*\n' +
+        'Theme Name: <%= pkg.name %>\n' +
+        'Theme URI: <%= pkg.homepage %>\n' +
+        'Description: <%= pkg.description %>\n' +
+        'Author: JV Software\n' +
+        'Author URI: <%= pkg.homepage %>\n' +
+        'Version: <%= pkg.version %>\n' +
         '*/'
     },
     jshint: {
@@ -83,12 +83,22 @@ module.exports = function(grunt) {
           outputStyle: 'compressed'
         }
       }
+    },
+    cssmin: {
+      options: {
+        banner: '<%= meta.wpblock %>',
+        keepSpecialComments: false
+      },
+      dist: {
+        src: ['../style.css'],
+        dest: '../style.css'
+      }
     }
   });
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'concat:dist', 'uglify', 'compass:dist']);
-  // Dev task disable asset minification
+  grunt.registerTask('default', ['jshint', 'concat:dist', 'uglify', 'compass:dist', 'cssmin']);
+  // Dev tasks disable asset minification
   grunt.registerTask('dev', ['jshint', 'concat:dev', 'compass:dev']);
 
   // Load plugins
@@ -96,5 +106,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-css');
 
 };

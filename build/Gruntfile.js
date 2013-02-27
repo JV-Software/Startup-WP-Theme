@@ -38,13 +38,23 @@ module.exports = function(grunt) {
         }
       },
       files: ['grunt.js', '../js/script.js']
+    },
+    concat: {
+      options: {
+        stripBanners: true
+      },
+      dist: {
+        src: ['../js/libs/!(modernizr|selectivizr).js', '../js/script.js'],
+        dest: '../js/script.min.js'
+      }
     }
   });
 
   // Default task.
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['jshint', 'concat']);
 
   // Load plugins
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
 };

@@ -87,7 +87,9 @@ module.exports = function(grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'compass']);
+  grunt.registerTask('default', ['jshint', 'concat:dist', 'uglify', 'compass:dist']);
+  // Dev task disable asset minification
+  grunt.registerTask('dev', ['jshint', 'concat:dev', 'compass:dev']);
 
   // Load plugins
   grunt.loadNpmTasks('grunt-contrib-jshint');

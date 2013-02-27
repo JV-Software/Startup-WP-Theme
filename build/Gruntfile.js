@@ -40,11 +40,15 @@ module.exports = function(grunt) {
       files: ['grunt.js', '../js/script.js']
     },
     concat: {
-      options: {
-        stripBanners: true
+      dev: {
+        src: ['../js/libs/!(modernizr|selectivizr).js', '../js/script.js'],
+        dest: '../js/script.min.js'
       },
       dist: {
-        src: ['../js/libs/!(modernizr|selectivizr).js', '../js/script.js'],
+        options: {
+          stripBanners: true
+        },
+        src: '<%= concat.dev.src %>',
         dest: '../js/script.min.js'
       }
     },

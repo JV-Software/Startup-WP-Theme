@@ -56,15 +56,39 @@ module.exports = function(grunt) {
         src: ['../js/script.min.js'],
         dest: '../js/script.min.js'
       }
+    },
+    compass: {
+      options: {
+        cssDir: '..',
+        sassDir: '../sass',
+        imagesDir: '../img',
+        javascriptsDir: '../js',
+        fontsDir: '../fonts',
+        relativeAssets: true,
+        force: true
+      },
+      dev: {
+        options: {
+          noLineComments: false,
+          outputStyle: 'expanded'
+        }
+      },
+      dist: {
+        options: {
+          noLineComments: true,
+          outputStyle: 'compressed'
+        }
+      }
     }
   });
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'compass']);
 
   // Load plugins
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-compass');
 
 };

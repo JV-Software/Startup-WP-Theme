@@ -37,7 +37,7 @@ module.exports = function(grunt) {
           jQuery: true
         }
       },
-      files: ['grunt.js', '../js/script.js']
+      files: ['Gruntfile.js', '../js/script.js']
     },
     concat: {
       dev: {
@@ -84,6 +84,15 @@ module.exports = function(grunt) {
         }
       }
     },
+    watch: {
+      options: {
+        interrupt: true
+      },
+      dist: {
+        files: ['<%= jshint.files %>', '../sass/**/*.scss', '../js/**/*.js'],
+        tasks: 'default'
+      }
+    },
     cssmin: {
       options: {
         banner: '<%= meta.wpblock %>',
@@ -106,6 +115,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-css');
 
 };

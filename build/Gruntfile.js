@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
         '* <%= pkg.homepage %>\n' +
         '* Copyright (c) <%= grunt.template.today("yyyy") %> ' +
-        'JV Software */',
+        'JV Software */\n',
       wpblock: '/*! \n' +
         'Theme Name: <%= pkg.name %> \n' +
         'Theme URI: <%= pkg.homepage %> \n' +
@@ -47,14 +47,24 @@ module.exports = function(grunt) {
         src: ['../js/libs/!(modernizr|selectivizr).js', '../js/script.js'],
         dest: '../js/script.min.js'
       }
+    },
+    uglify: {
+      options: {
+        banner: '<%= meta.banner %>'
+      },
+      dist: {
+        src: ['../js/script.min.js'],
+        dest: '../js/script.min.js'
+      }
     }
   });
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'concat']);
+  grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
 
   // Load plugins
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
 };

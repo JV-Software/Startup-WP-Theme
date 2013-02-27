@@ -93,6 +93,14 @@ module.exports = function(grunt) {
         tasks: 'default'
       }
     },
+    clean: {
+      options: {
+        force: true
+      },
+      dist: {
+        src: ['<%= uglify.dist.dest %>', '<%= cssmin.dist.dest %>']
+      }
+    },
     cssmin: {
       options: {
         banner: '<%= meta.wpblock %>',
@@ -116,6 +124,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-css');
 
 };

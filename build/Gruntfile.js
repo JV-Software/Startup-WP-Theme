@@ -85,10 +85,10 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      options: {
-        interrupt: true
-      },
       dist: {
+        options: {
+          interrupt: true
+        },
         files: ['<%= jshint.files %>', '../sass/**/*.scss', '../js/**/*.js'],
         tasks: 'default'
       }

@@ -99,9 +99,6 @@ module.exports = function(grunt) {
       },
       dist: {
         src: ['<%= uglify.dist.dest %>', '<%= cssmin.dist.dest %>']
-      },
-      img: {
-        src: ['<%= compass.options.imagesDir %>/optimized']
       }
     },
     imagemin: {
@@ -130,11 +127,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['jshint', 'concat:dist', 'uglify', 'compass:dist', 'cssmin']);
   // Dev tasks disable asset minification
   grunt.registerTask('dev', ['jshint', 'concat:dev', 'compass:dev']);
-  // Minify images
-  grunt.registerTask('imgmin', function() {
-    // Clean optimized directory and run optimizer
-    grunt.task.run(['clean:img', 'imagemin']);
-  });
   
   // Load plugins
   grunt.loadNpmTasks('grunt-contrib-jshint');

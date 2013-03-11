@@ -103,12 +103,18 @@ module.exports = function(grunt) {
     },
     imagemin: {
       options: {
-        optimizationLevel: 3,
+        optimizationLevel: 7,
         progressive: true
       },
       dist: {
-        src: ['../img/*.{png,jpg,jpeg}'],
-        dest: '../img/optimized'
+        files: [
+          {
+            expand: true,
+            cwd: '../img',
+            src: ['**/*.{png,jpg,jpeg}'],
+            dest: '../img'
+          }
+        ]
       }
     },
     cssmin: {

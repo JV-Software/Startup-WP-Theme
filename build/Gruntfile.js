@@ -5,11 +5,13 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     meta: {
-      banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+      banner: '/*\n' + 
+        '<%= pkg.name %> - v<%= pkg.version %> - ' +
         '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-        '* <%= pkg.homepage %>\n' +
-        '* Copyright (c) <%= grunt.template.today("yyyy") %> ' +
-        'JV Software */\n',
+        '<%= pkg.homepage %>\n' +
+        'Copyright (c) <%= grunt.template.today("yyyy") %> ' +
+        'JV Software\n' + 
+        '*/\n',
       wpblock: '/*\n' +
         'Theme Name: <%= pkg.name %>\n' +
         'Theme URI: <%= pkg.homepage %>\n' +

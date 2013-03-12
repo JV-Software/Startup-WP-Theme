@@ -5,12 +5,12 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     meta: {
-      banner: '/*\n' + 
+      banner: '/*\n' +
         '<%= pkg.name %> - v<%= pkg.version %> - ' +
         '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
         '<%= pkg.homepage %>\n' +
         'Copyright (c) <%= grunt.template.today("yyyy") %> ' +
-        'JV Software\n' + 
+        'JV Software\n' +
         '*/\n',
       wpblock: '/*\n' +
         'Theme Name: <%= pkg.name %>\n' +
@@ -88,9 +88,6 @@ module.exports = function(grunt) {
     },
     watch: {
       dist: {
-        options: {
-          interrupt: true
-        },
         files: ['<%= jshint.files %>', '../sass/**/*.scss', '../js/**/*.js'],
         tasks: 'default'
       }
@@ -135,7 +132,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['jshint', 'concat:dist', 'uglify', 'compass:dist', 'cssmin']);
   // Dev tasks disable asset minification
   grunt.registerTask('dev', ['jshint', 'concat:dev', 'compass:dev']);
-  
+
   // Load plugins
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');

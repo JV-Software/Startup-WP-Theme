@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"  />
 </head>
 <body <?php body_class(); ?>>
-    
+
 
     <?php wp_footer(); ?>
 </body>

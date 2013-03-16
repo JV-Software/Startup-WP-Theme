@@ -1,0 +1,39 @@
+/* =============================================================================
+Custom WP CSS Styles
+========================================================================== */
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignleft {
+    float: left;
+    margin: 0 $base-spacing-unit $base-spacing-unit 0;
+}
+
+.alignright {
+    float: right;
+    margin: 0 0 $base-spacing-unit $base-spacing-unit;
+}
+
+.wp-caption {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    @include border-radius(4px);
+}
+
+.wp-caption img {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.wp-caption .wp-caption-text {
+    padding: 3px;
+    margin: 0;
+    font-size: 85%;
+    font-style: italic;
+}

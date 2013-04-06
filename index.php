@@ -7,7 +7,7 @@
     <title>
     <?php
         if ( is_home() || is_front_page() ) { bloginfo('name'); echo ' | '; bloginfo('description'); }
-        elseif ( is_search() ) { bloginfo('name'); echo ' | Results for: ' . wp_specialchars($s); }
+        elseif ( is_search() ) { bloginfo('name'); echo ' | Results for: ' . esc_html($s); }
         elseif ( is_404() ) { bloginfo('name'); echo ' | Not found'; }
         else { bloginfo('name'); wp_title(' | '); }
     ?>

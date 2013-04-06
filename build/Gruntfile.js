@@ -90,6 +90,10 @@ module.exports = function(grunt) {
       dist: {
         files: ['<%= jshint.files %>', '../sass/**/*.scss', '../js/**/*.js'],
         tasks: 'default'
+      },
+      compass : {
+        files: ['../sass/**/*.scss'],
+        tasks: ['compass:dist', 'cssmin']
       }
     },
     clean: {

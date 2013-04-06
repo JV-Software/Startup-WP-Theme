@@ -18,7 +18,7 @@ Custom WP CSS Styles
     padding: 5px;
     text-align: center;
     border: 1px solid #ddd;
-    @include border-radius(4px);
+    @include border-radius($brand-round);
 }
 
 .wp-caption img {

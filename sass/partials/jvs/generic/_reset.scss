@@ -1,0 +1,89 @@
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/**
+ * A more considered reset; more of a restart...
+ * As per: csswizardry.com/2011/10/reset-restarted
+ */
+
+@if $global-border-box == true{
+    /**
+    * Let’s make the box model all nice, shall we...?
+    */
+    *{
+        &,
+        &:before,
+        &:after{
+            @include vendor(box-sizing, border-box);
+        }
+    }
+}
+
+/**
+ * The usual...
+ */
+h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,
+dl,dd,ol,ul,
+form,fieldset,legend,
+table,th,td,caption,
+hr{
+    margin:0;
+    padding:0;
+}
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+abbr[title],dfn[title]{
+    cursor:help;
+}
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+u,ins{
+    text-decoration:none;
+}
+
+/**
+ * Apply faux underline via `border-bottom`.
+ */
+ins{
+    border-bottom:1px solid;
+}
+
+/**
+ * 1. So that `alt` text is visually offset if images don’t load.
+ * 2. Remove the gap between images and the bottom of their containers
+ */
+img{
+    font-style:italic; /* [1] */
+    vertical-align: middle; /* [2] */
+}
+
+/**
+ * Give form elements some cursor interactions...
+ */
+label,
+button{
+    cursor:pointer;
+}
+
+/**
+ * Allow only vertical resizing of textareas.
+ */
+textarea{
+    resize:vertical;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr{
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid $base-ui-color;
+    padding:0;
+}

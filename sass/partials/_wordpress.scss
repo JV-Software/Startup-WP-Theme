@@ -1,0 +1,35 @@
+/* =============================================================================
+Custom WP CSS Styles
+========================================================================== */
+
+.aligncenter {
+    @extend .img--center;
+}
+
+.alignleft {
+    @extend .img--left;
+}
+
+.alignright {
+    @extend .img--right;
+}
+
+.wp-caption {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    @include border-radius($brand-round);
+}
+
+.wp-caption img {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.wp-caption .wp-caption-text {
+    padding: 3px;
+    margin: 0;
+    font-size: 85%;
+    font-style: italic;
+}

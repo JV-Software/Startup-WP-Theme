@@ -1,0 +1,225 @@
+/* =============================================================================
+Default variables
+========================================================================== */
+
+// Support for gradients in IE9
+$experimental-support-for-svg: true;
+
+// Debug
+$debug-mode: false;
+
+// Border box
+$global-border-box: true;
+
+/* =============================================================================
+Typography
+========================================================================== */
+
+// Base font
+$base-font-size: 14px;
+$base-line-height: 20px;
+
+// Base font family
+$base-font-family: sans-serif;
+
+// Default colour for objects’ borders etc.
+$base-ui-color: #ccc;
+
+// Background color
+$bg-color: #FFF;
+
+// Headings
+$heading-color: #000000;
+
+// Text
+$font-color: #000000;
+
+// Links
+$link-color: #0000ee;
+
+/* =============================================================================
+Responsive
+========================================================================== */
+
+// Enable responsiveness
+$responsive: false;
+
+// Responsiveness for widescreen/high resolution desktop monitors and beyond
+$responsive-extra: false;
+
+// Responsive push classes
+$push: false;
+
+// Note: `$push` variable above must be set to true before enabling these.
+$palm-push: false;
+$lap-push: false;
+$lap-and-up-push: false;
+$portable-push: false;
+$desk-push: false;
+
+$pull: false;
+
+// Note: `$pull` variable above must be set to true before enabling these.
+$palm-pull: false;
+$lap-pull: false;
+$lap-and-up-pull: false;
+$portable-pull: false;
+$desk-pull: false;
+
+// Responsive breakpoints.
+$lap-start: 481px;
+$desk-start: 1024px;
+$desk-wide-start: 1200px;
+
+/* =============================================================================
+Font sizes
+========================================================================== */
+
+// Font-sizes (in pixels). Refer to relevant sections for their implementations.
+$giga-size: 96px;
+$mega-size: 72px;
+$kilo-size: 48px;
+
+$h1-size: 36px; // .alpha
+$h2-size: 30px; // .beta
+$h3-size: 24px; // .gamma
+$h4-size: 20px; // .delta
+$h5-size: 16px; // .epsilon
+$h6-size: 14px; // .zeta
+
+$milli-size: 12px;
+$micro-size: 10px;
+
+/* =============================================================================
+Quotes
+========================================================================== */
+
+// English quote marks
+$english-quotes: true;
+
+// If you want English quotes then please do not edit these; they’re only here
+// because Sass needs them.
+$open-quote: null;
+$close-quote: null;
+
+// If you need non-English quotes, please alter the following values accordingly:
+@if $english-quotes != true {
+    $open-quote: «;
+    $close-quote: »;
+}
+
+/* =============================================================================
+Brand
+========================================================================== */
+
+// Brand stuff
+$brand-color: #4a8ec2;
+$brand-face: Helvetica, sans-serif;
+
+// How big would you like round corners to be by default?
+$brand-round: 4px;
+
+/* =============================================================================
+Objects and absractions
+========================================================================== */
+
+// Which objects and abstractions would you like to use?
+$use-grids: false;
+$use-flexbox: false;
+$use-columns: false;
+$use-nav: false;
+$use-options: false;
+$use-pagination: false;
+$use-breadcrumb: false;
+$use-media: false;
+$use-marginalia: false;
+$use-island: false;
+$use-block-list: false;
+$use-matrix: false;
+$use-split: false;
+$use-this-or-this: false;
+$use-link-complex: false;
+$use-flyout: false;
+$use-arrows: false;
+$use-sprite: false;
+$use-icon-text: false;
+$use-beautons: false;
+$use-lozenges: false;
+$use-rules: false;
+$use-stats: false;
+$use-greybox: false;
+
+/* =============================================================================
+Framework
+========================================================================== */
+
+// inuit.css will work these next ones out for use within the framework.
+// Assign our `$base-line-height` to a new spacing var for more transparency.
+$base-spacing-unit: $base-line-height;
+$half-spacing-unit: $base-spacing-unit / 2;
+$line-height-ratio: $base-line-height / $base-font-size;
+
+/* =============================================================================
+Generic utility styles etc.
+========================================================================== */
+
+@import "inuit/generic/mixins";
+@import "inuit/generic/normalize";
+@import "jvs/generic/reset";
+@import "inuit/generic/clearfix";
+@import "jvs/generic/shared";
+
+/* =============================================================================
+Base styles; unclassed HTML elements etc.
+========================================================================== */
+
+@import "jvs/base/main";
+@import "jvs/base/headings";
+@import "inuit/base/paragraphs";
+@import "inuit/base/smallprint";
+// @import "inuit/base/quotes";
+// @import "inuit/base/code";
+@import "jvs/base/images";
+@import "inuit/base/lists";
+// @import "inuit/base/tables";
+@import "jvs/base/forms";
+
+/* =============================================================================
+Objects and abstractions
+========================================================================== */
+
+@import "inuit/objects/grids";
+@import "inuit/objects/flexbox";
+@import "inuit/objects/columns";
+@import "inuit/objects/nav";
+@import "inuit/objects/options";
+@import "inuit/objects/pagination";
+@import "inuit/objects/breadcrumb";
+@import "inuit/objects/media";
+@import "inuit/objects/marginalia";
+@import "inuit/objects/island";
+@import "inuit/objects/block-list";
+@import "inuit/objects/matrix";
+@import "inuit/objects/split";
+@import "inuit/objects/this-or-this";
+@import "inuit/objects/link-complex";
+@import "inuit/objects/flyout";
+@import "inuit/objects/arrows";
+@import "inuit/objects/sprite";
+@import "inuit/objects/icon-text";
+@import "inuit/objects/beautons";
+@import "inuit/objects/lozenges";
+@import "inuit/objects/rules";
+@import "inuit/objects/stats";
+@import "inuit/objects/greybox";
+
+/* =============================================================================
+Style trumps; helper and brand classes
+========================================================================== */
+
+// @import "inuit/generic/widths";
+@import "inuit/generic/push";
+@import "inuit/generic/pull";
+@import "inuit/generic/brand";
+@import "jvs/generic/helper";
+@import "inuit/generic/debug";

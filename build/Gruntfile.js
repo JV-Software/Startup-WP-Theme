@@ -71,6 +71,7 @@ module.exports = function(grunt) {
         javascriptsDir: '../js',
         fontsDir: '../fonts',
         relativeAssets: true,
+        importPath: '../sass/partials',
         force: true
       },
       dev: {

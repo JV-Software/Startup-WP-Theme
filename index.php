@@ -5,12 +5,7 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <title>
-    <?php
-        if ( is_home() || is_front_page() ) { bloginfo('name'); echo ' | '; bloginfo('description'); }
-        elseif ( is_search() ) { bloginfo('name'); echo ' | Results for: ' . esc_html($s); }
-        elseif ( is_404() ) { bloginfo('name'); echo ' | Not found'; }
-        else { bloginfo('name'); wp_title(' | '); }
-    ?>
+    <?php bloginfo('name'); ?> | <?php (is_home() || is_front_page()) ? bloginfo('description') : wp_title(''); ?>
     </title>
     <?php wp_head(); ?>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"  />

@@ -88,9 +88,9 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      dist: {
-        files: ['<%= jshint.files %>', '../sass/**/*.scss', '../js/**/*.js'],
-        tasks: 'default'
+      js: {
+        files: ['Gruntfile.js', '../js/**/*.js', '!<%= concat.dist.dest%>'],
+        tasks: ['jshint', 'concat:dist', 'uglify']
       },
       compass : {
         files: ['../sass/**/*.scss'],

@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         'JV Software\n' +
         '*/\n',
       wpblock: '/*\n' +
-        'Theme Name: <%= pkg.name %>\n' +
+        'Theme Name: <%= _(_.humanize(pkg.name)).titleize() %>\n' +
         'Theme URI: <%= pkg.homepage %>\n' +
         'Description: <%= pkg.description %>\n' +
         'Author: JV Software\n' +

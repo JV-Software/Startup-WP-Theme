@@ -1,9 +1,9 @@
 /**
- * Custom scripts to load on DOM ready
+ * Custom scripts to load when DOM is ready
  *
  * @param  jQuery $
  * @return void
  */
-jQuery(document).ready(function($) {
+(function($) {
     //
-});
+})(jQuery);

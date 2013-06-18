@@ -88,6 +88,9 @@ module.exports = function(grunt) {
       }
     },
     watch: {
+      options: {
+        livereload: true
+      },
       js: {
         files: ['Gruntfile.js', '../js/**/*.js', '!<%= concat.dist.dest%>'],
         tasks: ['jshint', 'concat:dist', 'uglify']
@@ -95,6 +98,9 @@ module.exports = function(grunt) {
       compass : {
         files: ['../sass/**/*.scss'],
         tasks: ['compass:dist', 'cssmin']
+      },
+      php : {
+        files: ['../**/*.php']
       }
     },
     clean: {

@@ -72,7 +72,8 @@ module.exports = function(grunt) {
         fontsDir: '../fonts',
         relativeAssets: true,
         importPath: '../sass/partials',
-        force: true
+        force: true,
+        require: ['compass-inuit']
       },
       dev: {
         options: {

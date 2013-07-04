@@ -8,8 +8,8 @@
     <title>
     <?php bloginfo('name'); ?> | <?php (is_home() || is_front_page()) ? bloginfo('description') : wp_title(''); ?>
     </title>
-    <?php wp_head(); ?>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"  />
+    <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 

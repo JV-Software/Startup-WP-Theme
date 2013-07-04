@@ -163,10 +163,10 @@ $line-height-ratio: $base-line-height / $base-font-size;
 Generic utility styles etc.
 ========================================================================== */
 
-@import "inuit/generic/mixins";
-@import "inuit/generic/normalize";
+@import "compass-inuit/generic/mixins";
+@import "compass-inuit/generic/normalize";
 @import "jvs/generic/reset";
-@import "inuit/generic/clearfix";
+@import "compass-inuit/generic/clearfix";
 @import "jvs/generic/shared";
 
 /* =============================================================================
@@ -175,51 +175,51 @@ Base styles; unclassed HTML elements etc.
 
 @import "jvs/base/main";
 @import "jvs/base/headings";
-@import "inuit/base/paragraphs";
-@import "inuit/base/smallprint";
-// @import "inuit/base/quotes";
-// @import "inuit/base/code";
+@import "compass-inuit/base/paragraphs";
+@import "compass-inuit/base/smallprint";
+// @import "compass-inuit/base/quotes";
+// @import "compass-inuit/base/code";
 @import "jvs/base/images";
-@import "inuit/base/lists";
-// @import "inuit/base/tables";
+@import "compass-inuit/base/lists";
+// @import "compass-inuit/base/tables";
 @import "jvs/base/forms";
 
 /* =============================================================================
 Objects and abstractions
 ========================================================================== */
 
-@import "inuit/objects/grids";
-@import "inuit/objects/flexbox";
-@import "inuit/objects/columns";
-@import "inuit/objects/nav";
-@import "inuit/objects/options";
-@import "inuit/objects/pagination";
-@import "inuit/objects/breadcrumb";
-@import "inuit/objects/media";
-@import "inuit/objects/marginalia";
-@import "inuit/objects/island";
-@import "inuit/objects/block-list";
-@import "inuit/objects/matrix";
-@import "inuit/objects/split";
-@import "inuit/objects/this-or-this";
-@import "inuit/objects/link-complex";
-@import "inuit/objects/flyout";
-@import "inuit/objects/arrows";
-@import "inuit/objects/sprite";
-@import "inuit/objects/icon-text";
-@import "inuit/objects/beautons";
-@import "inuit/objects/lozenges";
-@import "inuit/objects/rules";
-@import "inuit/objects/stats";
-@import "inuit/objects/greybox";
+@import "compass-inuit/objects/grids";
+@import "compass-inuit/objects/flexbox";
+@import "compass-inuit/objects/columns";
+@import "compass-inuit/objects/nav";
+@import "compass-inuit/objects/options";
+@import "compass-inuit/objects/pagination";
+@import "compass-inuit/objects/breadcrumb";
+@import "compass-inuit/objects/media";
+@import "compass-inuit/objects/marginalia";
+@import "compass-inuit/objects/island";
+@import "compass-inuit/objects/block-list";
+@import "compass-inuit/objects/matrix";
+@import "compass-inuit/objects/split";
+@import "compass-inuit/objects/this-or-this";
+@import "compass-inuit/objects/link-complex";
+@import "compass-inuit/objects/flyout";
+@import "compass-inuit/objects/arrows";
+@import "compass-inuit/objects/sprite";
+@import "compass-inuit/objects/icon-text";
+@import "compass-inuit/objects/beautons";
+@import "compass-inuit/objects/lozenges";
+@import "compass-inuit/objects/rules";
+@import "compass-inuit/objects/stats";
+@import "compass-inuit/objects/greybox";
 
 /* =============================================================================
 Style trumps; helper and brand classes
 ========================================================================== */
 
-// @import "inuit/generic/widths";
-@import "inuit/generic/push";
-@import "inuit/generic/pull";
-@import "inuit/generic/brand";
+// @import "compass-inuit/generic/widths";
+@import "compass-inuit/generic/push";
+@import "compass-inuit/generic/pull";
+@import "compass-inuit/generic/brand";
 @import "jvs/generic/helper";
-@import "inuit/generic/debug";
+@import "compass-inuit/generic/debug";

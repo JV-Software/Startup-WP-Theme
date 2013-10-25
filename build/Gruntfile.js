@@ -1,6 +1,9 @@
 /* jshint indent: 2 */
-/* global module */
+/* global module, require */
 module.exports = function(grunt) {
+
+  // show elapsed time at the end
+  require('time-grunt')(grunt);
 
   // Project configuration.
   grunt.initConfig({

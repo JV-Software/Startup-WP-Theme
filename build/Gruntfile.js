@@ -99,7 +99,7 @@ module.exports = function(grunt) {
       },
       compass : {
         files: ['../sass/**/*.scss'],
-        tasks: ['compass:dist', 'cssmin']
+        tasks: ['compass:dist', 'autoprefixer', 'cssmin']
       },
       php : {
         files: ['../**/*.php']
@@ -138,13 +138,22 @@ module.exports = function(grunt) {
         src: ['../style.css'],
         dest: '../style.css'
       }
+    },
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions', 'ie 8']
+      },
+      dist: {
+        src: '<%= cssmin.dist.dest %>',
+        dest: '<%= cssmin.dist.dest %>'
+      }
     }
   });
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'concat:dist', 'uglify', 'compass:dist', 'cssmin']);
+  grunt.registerTask('default', ['jshint', 'concat:dist', 'uglify', 'compass:dist', 'autoprefixer', 'cssmin']);
   // Dev tasks disable asset minification
-  grunt.registerTask('dev', ['jshint', 'concat:dev', 'compass:dev']);
+  grunt.registerTask('dev', ['jshint', 'concat:dev', 'compass:dev', 'autoprefixer']);
 
   // Load plugins
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -155,5 +164,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
 };

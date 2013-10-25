@@ -10,9 +10,9 @@
  */
 function jvs_theme_setup() {
     // Add default posts and comments RSS feed links to <head>.
-    add_theme_support('automatic-feed-links');
+    add_theme_support( 'automatic-feed-links' );
 }
-add_action('after_setup_theme', 'jvs_theme_setup');
+add_action( 'after_setup_theme', 'jvs_theme_setup' );
 
 /**
  * Enqueue required scripts
@@ -21,12 +21,12 @@ add_action('after_setup_theme', 'jvs_theme_setup');
  */
 function jvs_enqueue_scripts() {
     // Enqueue jQuery
-    wp_enqueue_script('jquery');
+    wp_enqueue_script( 'jquery' );
 
     // Enqueue custom theme scripts in footer
-    wp_enqueue_script('custom-scripts', get_template_directory_uri() . '/js/script.min.js', array('jquery'), false, true);
+    wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/js/script.min.js', array('jquery'), false, true );
 }
-add_action('wp_enqueue_scripts', 'jvs_enqueue_scripts');
+add_action( 'wp_enqueue_scripts', 'jvs_enqueue_scripts' );
 
 // Remove WP version from <head>
-remove_action('wp_head', 'wp_generator');
+remove_action( 'wp_head', 'wp_generator' );

@@ -11,13 +11,13 @@ module.exports = function(grunt) {
         '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
         '<%= pkg.homepage %>\n' +
         'Copyright (c) <%= grunt.template.today("yyyy") %> ' +
-        'JV Software\n' +
+        '<%= pkg.author %>\n' +
         '*/\n',
       wpblock: '/*\n' +
         'Theme Name: <%= _(_.humanize(pkg.name)).titleize() %>\n' +
         'Theme URI: <%= pkg.homepage %>\n' +
         'Description: <%= pkg.description %>\n' +
-        'Author: JV Software\n' +
+        'Author: <%= pkg.author %>\n' +
         'Author URI: <%= pkg.homepage %>\n' +
         'Version: <%= pkg.version %>\n' +
         '*/'

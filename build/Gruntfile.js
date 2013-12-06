@@ -77,7 +77,7 @@ module.exports = function(grunt) {
         relativeAssets: true,
         importPath: '../sass/partials',
         force: true,
-        require: ['compass-inuit', 'compass-photoshop-drop-shadow']
+        require: ['compass-inuit', 'compass-photoshop-drop-shadow', 'compass-photoshop-gradient-overlay']
       },
       dev: {
         options: {

@@ -67,13 +67,15 @@ add_filter( 'wp_title', 'jvs_wp_title', 10, 2 );
 if ( $_SERVER['SERVER_ADDR'] !== '127.0.0.1' ) {
 
 /**
- * Hide post types and custom fields menu if not on localhost
+ * Hide dev-only menus if not running on localhost
  *
- * @return string
+ * @return void
  */
-function jvs_hide_admin_menu() {
-    echo '<style type="text/css">#toplevel_page_edit-post_type-acf, #toplevel_page_cpt_main_menu{display:none;}</style>';
+function jvs_remove_menus() {
+    remove_menu_page( 'edit.php?post_type=acf' );
+    remove_menu_page( 'cpt_main_menu' );
+    remove_submenu_page( 'tools.php', 'wp-migrate-db-pro' );
 }
-add_action( 'admin_head', 'jvs_hide_admin_menu' );
+add_action( 'admin_menu', 'jvs_remove_menus', 20 );
 
 }

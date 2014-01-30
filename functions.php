@@ -24,7 +24,7 @@ function jvs_enqueue_scripts() {
     wp_enqueue_script( 'jquery' );
 
     // Enqueue custom theme scripts in footer
-    wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/js/script.min.js', array('jquery'), false, true );
+    wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/js/script.min.js', array( 'jquery' ), false, true );
     
     // Loads main stylesheet.
     wp_enqueue_style( 'jvs-styles', get_stylesheet_uri(), array(), '2013-10-24' );

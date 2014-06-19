@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         '<%= pkg.homepage %>\n' +
         'Copyright (c) <%= grunt.template.today("yyyy") %> ' +
         '<%= pkg.author %>\n' +
-        '*/\n',
+        '*/',
       wpblock: '/*\n' +
         'Theme Name: <%= _(_.humanize(pkg.name)).titleize() %>\n' +
         'Theme URI: <%= pkg.homepage %>\n' +
@@ -45,25 +45,13 @@ module.exports = function(grunt) {
       },
       files: ['Gruntfile.js', '../js/script.js']
     },
-    concat: {
-      dev: {
-        src: ['../js/libs/!(modernizr|selectivizr).js', '../js/script.js'],
-        dest: '../js/script.min.js'
-      },
-      dist: {
-        options: {
-          stripBanners: true
-        },
-        src: '<%= concat.dev.src %>',
-        dest: '../js/script.min.js'
-      }
-    },
     uglify: {
       options: {
-        banner: '<%= meta.banner %>'
+        banner: '<%= meta.banner %>',
+        sourceMap: true
       },
       dist: {
-        src: ['../js/script.min.js'],
+        src: ['../js/libs/!(modernizr|selectivizr).js', '../js/script.js'],
         dest: '../js/script.min.js'
       }
     },
@@ -97,8 +85,8 @@ module.exports = function(grunt) {
         livereload: true
       },
       js: {
-        files: ['Gruntfile.js', '../js/**/*.js', '!<%= concat.dist.dest%>'],
-        tasks: ['jshint', 'concat:dist', 'uglify']
+        files: ['Gruntfile.js', '../js/**/*.js', '!<%= uglify.dist.dest %>'],
+        tasks: ['jshint', 'uglify']
       },
       compass : {
         files: ['../sass/**/*.scss'],
@@ -154,13 +142,12 @@ module.exports = function(grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'concat:dist', 'uglify', 'compass:dist', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('default', ['jshint', 'uglify', 'compass:dist', 'autoprefixer', 'cssmin']);
   // Dev tasks disable asset minification
-  grunt.registerTask('dev', ['jshint', 'concat:dev', 'compass:dev', 'autoprefixer']);
+  grunt.registerTask('dev', ['jshint', 'compass:dev', 'autoprefixer']);
 
   // Load plugins
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
